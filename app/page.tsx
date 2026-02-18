@@ -7,6 +7,7 @@ import Leverage from "./components/Leverage";
 import GetMore from "./components/GetMore";
 import Talents from "./components/Talents";
 import Store from "./components/Store";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <GetMore />
       <Talents />
       <Store />
+      <Footer />
     </div>
   );
 }
