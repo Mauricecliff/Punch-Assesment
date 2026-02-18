@@ -5,6 +5,8 @@ import Browse from "./components/Browse";
 import Process from "./components/Process";
 import Leverage from "./components/Leverage";
 import GetMore from "./components/GetMore";
+import Talents from "./components/Talents";
+import Store from "./components/Store";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <Process />
       <Leverage />
       <GetMore />
+      <Talents />
+      <Store />
     </div>
   );
 }
