@@ -1,11 +1,26 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Leverage() {
   return (
-    <section className="bg-[#e9eaed] py-16 md:py-24">
-      <div className="mx-auto flex w-full max-w-[1300px] flex-col items-center gap-10 px-6 lg:flex-row lg:items-center lg:gap-14">
-        <div className="w-full max-w-[350px] lg:max-w-[360px]">
-          <h2 className="text-[46px] leading-[0.98] font-semibold tracking-[-0.03em] text-[#282b39] md:text-[58px]">
+    <motion.section
+      className="bg-[#e9eaed] py-16 md:py-24"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.65, ease: "easeOut" }}
+    >
+      <div className="mx-auto flex w-full max-w-[1300px] flex-col items-center gap-10 px-4 sm:px-6 lg:flex-row lg:items-center lg:gap-14">
+        <motion.div
+          className="w-full max-w-[560px] lg:max-w-[360px]"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <h2 className="text-[36px] leading-[0.98] font-semibold tracking-[-0.03em] text-[#282b39] sm:text-[44px] md:text-[58px]">
             Leverage Zwilt’s
             <br />
             technology for
@@ -15,24 +30,21 @@ export default function Leverage() {
             interviews.
           </h2>
 
-          <p className="mt-6 text-[14px] leading-[1.55] font-medium text-[#5b5f6d]">
-            All of the browsing, filtering & search
-            <br />
-            capabilities including Pre-Meet™ & Click-to-
-            <br />
-            Skip™ are available for your own interviews. It
-            <br />
-            has never been easier to create an interview,
-            <br />
+          <p className="mt-6 text-[14px] leading-[1.55] font-medium text-[#5b5f6d] md:text-[15px]">
+            All of the browsing, filtering &amp; search capabilities including Pre-Meet™ &amp; Click-to-Skip™ are available for your own interviews. It has never been easier to create an interview,{' '}
             <span className="bg-[#e9cb68] px-1.5 text-[#2b2f3b]">
-              paste a link to your job post and the rest is done
+              paste a link to your job post and the rest is done automagically!
             </span>
-            <br />
-            <span className="bg-[#e9cb68] px-1.5 text-[#2b2f3b]">automagically!</span>
           </p>
-        </div>
+        </motion.div>
 
-        <div className="w-full max-w-[860px]">
+        <motion.div
+          className="w-full max-w-[860px]"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, delay: 0.15 }}
+        >
           <Image
             src="/section-4.png"
             alt="Leverage Zwilt technology interface"
@@ -40,8 +52,8 @@ export default function Leverage() {
             height={760}
             className="h-auto w-full object-contain"
           />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,15 +1,30 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Product() {
   return (
-    <section className="bg-[#ffffff] py-16 md:py-20">
-      <div className="mx-auto flex max-w-[1320px] flex-col gap-10 px-6 lg:flex-row lg:items-start lg:gap-12">
-        <div className="max-w-[520px] pt-2">
+    <motion.section
+      className="bg-[#ffffff] py-14 md:py-20"
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.65, ease: "easeOut" }}
+    >
+      <div className="mx-auto flex max-w-[1320px] flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:gap-12">
+        <motion.div
+          className="max-w-[620px] pt-2"
+          initial={{ opacity: 0, x: -25 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+        >
           <span className="inline-flex rounded-full bg-[#b8abff] px-5 py-2 text-sm font-semibold text-[#26223f]">
             Product
           </span>
 
-          <h1 className="mt-7 text-[67px] leading-[1.05] font-semibold tracking-[-0.02em] text-[#262836]">
+          <h1 className="mt-7 text-[34px] leading-[1.06] font-semibold tracking-[-0.02em] text-[#262836] sm:text-[42px] md:text-[52px] lg:text-[67px]">
             Zwilt is a modern day <span className="bg-[#e9cb68] px-2">recruitment platform</span>
             <br />
             We use AI interviewers,
@@ -22,10 +37,15 @@ export default function Product() {
             <br />
             companies hire better.
           </h1>
-        </div>
+        </motion.div>
 
-        {/* Right Image Section */}
-        <div className="w-full max-w-[760px]">
+        <motion.div
+          className="w-full max-w-[760px]"
+          initial={{ opacity: 0, x: 25 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <div className="relative overflow-hidden rounded-xl bg-[#efeff1] p-3 shadow-[0_18px_60px_rgba(17,24,39,0.12)]">
             <Image
               src="/section-1.png"
@@ -36,9 +56,8 @@ export default function Product() {
               priority
             />
           </div>
-        </div>
-
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
