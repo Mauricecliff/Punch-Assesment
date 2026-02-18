@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import Product from "./components/Product";
 import Browse from "./components/Browse";
 import Process from "./components/Process";
+import Leverage from "./components/Leverage";
+import GetMore from "./components/GetMore";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <Product />
       <Browse />
       <Process />
+      <Leverage />
+      <GetMore />
     </div>
   );
 }
