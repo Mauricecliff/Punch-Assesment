@@ -24,7 +24,7 @@ export default function Browse() {
 
         <div className="mt-5 w-full max-w-[1020px] overflow-hidden rounded-2xl bg-[#b7a8ff] p-5 shadow-[0_28px_60px_rgba(35,23,76,0.15)] md:p-8">
           <Image
-            src="/section-1.png"
+            src="/section-3.png"
             alt="Browse experience interface"
             width={1200}
             height={740}
